@@ -1,19 +1,4 @@
 Write-up for Proj 1
-(1) (10 points) What is the name of the (user space) wrapper function of the system call for the
-shutdown2 command (2 points)? Where is this wrapper function invoked (3 points)? Where
-is this function defined (5 points)?
-
-
-(2) (10 points) Explain (with the actual code) how the above wrapper function triggers the system
-call.
-
-
-(3) (10 points) Explain (with the actual code) how the OS kernel locates a system call and calls
-it (i.e., the kernel-level operations of calling a system call).
-
-
-(4) (10 points) How are arguments of a system call passed from user space to OS kernel?
-
 
 mkdir2 (Jacob) - My implementation works as intended, creating two directories passed as arguments and
 rejecting the arguments if they do not have a length of 2. The sys_mkdir2 function is reached through a 
