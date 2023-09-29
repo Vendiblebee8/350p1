@@ -22,7 +22,6 @@ main(int argc, char * argv[])
 {    
     if(argc != 3){
         printf(1, "Please provide the names of two directories to create\n");
-        exit();
     }
 
 	mkdir2(argv[1], argv[2]);
