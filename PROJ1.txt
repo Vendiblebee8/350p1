@@ -13,3 +13,10 @@ it (i.e., the kernel-level operations of calling a system call).
 
 
 (4) (10 points) How are arguments of a system call passed from user space to OS kernel?
+
+
+mkdir2 (Jacob) - My implementation works as intended, creating two directories passed as arguments and
+rejecting the arguments if they do not have a length of 2. The sys_mkdir2 function is reached through a 
+wrapper routine. The function implements the code from sys_mkdir twice, using argstr(0, ...), retrieve the
+first argument and argstr(1, ...) to retrieve the second argument. The main function of mkdir2.c was modified,
+but only to add a newline character and exit when an incorrect number of arguments are passed.
