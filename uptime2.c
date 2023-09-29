@@ -7,7 +7,7 @@
    REMEMBER to disable the stub functions (by commenting the following macro) to 
    allow your implementation to work properly. */
 
-#define STUB_FUNCS
+// #define STUB_FUNCS
 #ifdef STUB_FUNCS
 int uptime2(int i) {return 0;}
 #endif
@@ -31,11 +31,11 @@ main(int argc, char * argv[])
     uint ut = uptime2(i);
 
     if(i == 1){
-        printf(1, "Current Uptime in ticks: %d", ut);
+        printf(1, "Current Uptime in ticks: %d\n", ut);
     } else if(i == 2){
-        printf(1, "Current Uptime in seconds: %d", ut);
+        printf(1, "Current Uptime in seconds: %d\n", ut);
     } else if(i == 3){
-        printf(1, "Current Uptime in minutes: %d", ut);
+        printf(1, "Current Uptime in minutes: %d\n", ut);
     }
 
     exit(); //return 0;

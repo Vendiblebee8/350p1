@@ -105,3 +105,28 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+int
+sys_uptime2(void)
+{
+  uint xticks;
+
+  acquire(&tickslock);
+  xticks = ticks;
+  release(&tickslock);
+
+  int arg;
+  argint(0,&arg);
+
+  switch(arg){
+    case 1:
+      return xticks;
+    case 2:
+      return xticks/100;
+    case 3:
+      return xticks/6000;
+    default:
+      return -1;
+  }
+}
+
