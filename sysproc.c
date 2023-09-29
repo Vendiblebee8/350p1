@@ -130,3 +130,15 @@ sys_uptime2(void)
   }
 }
 
+int 
+sys_exit2(void){
+  int status;
+
+    if (argint(0, &status) < 0)
+        return -1;
+
+    cprintf("Exit status: %d\n", status);
+    exit();
+    return 0;
+}
+
