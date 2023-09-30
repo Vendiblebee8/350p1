@@ -5,3 +5,7 @@ rejecting the arguments if they do not have a length of 2. The sys_mkdir2 functi
 wrapper routine. The function implements the code from sys_mkdir twice, using argstr(0, ...), retrieve the
 first argument and argstr(1, ...) to retrieve the second argument. The main function of mkdir2.c was modified,
 but only to add a newline character and exit when an incorrect number of arguments are passed.
+
+exit2 (Vincenzo) - My implementation is fully functional by properly giving the exit status when called and then exits while rejecting calls with an improper argument count. The function is located sysproc.c. By using argint we can take the integer of the exit status and then print that to the terminal for the user to see and then uses the regular exit function to exit the code from there. Below is a test case using the code with a proper positive integer argument.
+$ exit2 5
+Exit status: 5
