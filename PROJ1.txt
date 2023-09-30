@@ -7,3 +7,5 @@ $ exit2 5
 Exit status: 5
 
 shutdown2 (Ronald) - I did not come across any issues and my implementation works as intended. The system call shutdowns the operating system with a custom message that is passed as an argument. The kernel retrieves the custom message using argstr() and the system call prints out this message before calling the shutdown() system call.
+
+uptime2(Matthew) - My implementation was working as I wanted to. The uptime2 function was added in sysproc.c where I took similar code from uptime and took in a int argument which the kernel gets from argint, because uptime2 required 3 options ticks,seconds, and minutes. Then prints it all in the command line. 
